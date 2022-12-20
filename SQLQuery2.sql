@@ -67,6 +67,26 @@ select TitleOfCourtesy,FirstName,LastName from Employees where FirstName like  '
 select TitleOfCourtesy,FirstName,LastName from Employees where LastName like  '%N'
 
 
+select TitleOfCourtesy,FirstName,LastName from Employees where FirstName like  'A%' or FirstName like 'L%' 
+
+
+select TitleOfCourtesy,FirstName,LastName from Employees where LEFT(FirstName,1)='A' or LEFT(FirstName,1)='L'
+
+
+select TitleOfCourtesy,FirstName,LastName from Employees where FirstName like  '%[RT]%' 
+ 
+ --adinin arasind a ve e olan 
+select TitleOfCourtesy,FirstName,LastName from Employees where FirstName like  '%A_E%' 
+
+
+
+
+
+
+
+
+
+
 
 
 
