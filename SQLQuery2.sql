@@ -54,6 +54,17 @@ select TitleOfCourtesy,FirstName,LastName from Employees where FirstName='Michae
 --2) yol
 select TitleOfCourtesy,FirstName,LastName from Employees where FirstName like  'Michael'
 
+select TitleOfCourtesy,FirstName,LastName from Employees where LEFT(FirstName,1)='A'
+
+
+
+--2.yol
+
+select TitleOfCourtesy,FirstName,LastName from Employees where FirstName like  'A%'
+
+--Soyadinin son harfi n olanlARI TAPIN 
+
+select TitleOfCourtesy,FirstName,LastName from Employees where LastName like  '%N'
 
 
 
