@@ -49,6 +49,10 @@ FROM      dbo.Employees
 WHERE   (City = 'London')
 ORDER BY OgrencId
 
+--1) Yol
+select TitleOfCourtesy,FirstName,LastName from Employees where FirstName='Michael'
+--2) yol
+select TitleOfCourtesy,FirstName,LastName from Employees where FirstName like  'Michael'
 
 
 
