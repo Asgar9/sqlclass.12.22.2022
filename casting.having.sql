@@ -23,6 +23,43 @@ order by 2
 
 
 
+create trigger SatisYap on [Order Details] 
+after 
+insert
+as
+Begin
+select * from inserted
+End
+
+
+alter trigger IptalYap on [Order Details]
+after
+delete
+as 
+begin 
+declare
+@ProductID int,
+@Quantity smallint
+select
+       @ProductID = ProductID,
+       @Quantity = Quantity
+	   from deleted
+	   update Products
+	   set UnitsInStock = (UnitsInStock+@Quantity)
+	   where ProductID = @ProductID
+
+end 
+
+
+select *from [Order Details] 
+insert into [Order Details] where OrderID=10248 and ProductID=12     
+delete from [Order Details] where OrderID=10248 and ProductID=77
+select * from [Order Details] where OrderID=10248
+
+
+
+
+ 
 
 
 
